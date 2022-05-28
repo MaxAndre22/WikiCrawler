@@ -22,11 +22,21 @@
       />
 
     </q-form>
+
+    <div classname="data" class="bg-secondary" style="min-height: 100vh;">
+      <h5 class="text-center">Hay un promedio de {{varA}} títulos por página.</h5>
+      <h5 class="text-center">Usando Stemming hay un promedio de {{varB1}} palabras distintas por página, {{varB2}} por títulos y {{varB3}} por subtítulos.</h5>
+      <h5 class="text-center">En promedio un {{varC1}}% de las referencias tienen links y {{varC2}}% de estos links están activos.</h5>
+      <h5 class="text-center">Cada referencia se usa aproximadamente {{varD}} veces en el texto.</h5>
+      <h5 class="text-center">Un {{varE}}% de las imágenes tienen Alt.</h5>
+      <h5 class="text-center">Las palabras más comunes son: {{varF}}.</h5>
+    </div>
     
   </q-page>
 </template>
 
 <script>
+
 import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
@@ -38,6 +48,8 @@ export default defineComponent({
 
     return{ 
       words,
+      //Vue lifecycle hooks beforecreate()
+      varA: 10, varB1: 150, varB2: 7, varB3: 4, varC1: 40, varC2: 70, varD: 2, varE: 27, varF: "'What', 'The', 'A', 'An' y 'Another'",
       onSubmit(){
         console.log(words.value) 
       }
