@@ -3,7 +3,7 @@
     <q-form
       classname="Search"
       class="flex flex-center"
-      style="margin-top: -2%"
+      style="margin-top: -2%;"
       @submit="onSubmit"
     >
       <q-input
@@ -26,8 +26,8 @@
       />
     </q-form>
 
-    <div classname="data" class="bg-secondary" style="min-height: 100vh">
-      <h5 class="text-center">
+    <div classname="data" class="bg-secondary" style="margin-top: -2%; min-height: 100vh;">
+      <h5 class="text-center" style="padding-top: 2%;">
         Hay un promedio de {{ varA }} títulos por página.
       </h5>
       <h5 class="text-center">
@@ -80,3 +80,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style>
+h5{
+  line-height: 70%;
+}
+</style>

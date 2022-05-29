@@ -5,7 +5,7 @@ const routes = [
     children: [
       { path: '', component: () => import('pages/HomePage.vue') },
       { path: 'word/:keyword', name: 'word', prop: true, component: () => import('pages/WordPage.vue') },
-      { path: 'wiki/:keyword', name: 'wiki', prop: true, component: () => import('pages/WikipediaPage.vue') }
+      { path: 'wiki/:keyword/:page', name: 'wiki', prop: true, component: () => import('pages/WikipediaPage.vue') }
   ]
   },
 
