@@ -4,19 +4,9 @@
 
     <div classname="data" class="bg-secondary" style="min-height: 100vh;padding: 12px;">
       <ul style="list-style-type: none;">
-        <li><a href="https://www.w3schools.com"> PAGE NAME FROM RESULTS</a></li>
-        <li><a href="https://www.w3schools.com"> PAGE NAME FROM RESULTS</a></li>
-        <li><a href="https://www.w3schools.com"> PAGE NAME FROM RESULTS</a></li>
-        <li><a href="https://www.w3schools.com"> PAGE NAME FROM RESULTS</a></li>        
-        <li><a href="https://www.w3schools.com"> PAGE NAME FROM RESULTS</a></li>        
-        <li><a href="https://www.w3schools.com"> PAGE NAME FROM RESULTS</a></li>        
-        <li><a href="https://www.w3schools.com"> PAGE NAME FROM RESULTS</a></li>        
-        <li><a href="https://www.w3schools.com"> PAGE NAME FROM RESULTS</a></li>        
-        <li><a href="https://www.w3schools.com"> PAGE NAME FROM RESULTS</a></li>        
-        <li><a href="https://www.w3schools.com"> PAGE NAME FROM RESULTS</a></li>        
-        <li><a href="https://www.w3schools.com"> PAGE NAME FROM RESULTS</a></li>        
-        <li><a href="https://www.w3schools.com"> PAGE NAME FROM RESULTS</a></li>        
-        <li><a href="https://www.w3schools.com"> PAGE NAME FROM RESULTS</a></li>
+        <li><a href="#"> PAGE NAME FROM RESULTS</a></li>
+        <li><a href="#"> PAGE NAME FROM RESULTS</a></li> 
+        <li><a href="#"> PAGE NAME FROM RESULTS</a></li>
       </ul>
     </div>
   </q-page>
@@ -25,6 +15,8 @@
 <script>
 import { defineComponent } from 'vue'
 import { useRouter } from 'vue-router'
+
+//const resultsNamePages = //Lista de nombres de paginas que son respuesta --> Dinamico
 
 // Results = pages that the word appears
 export default defineComponent({
