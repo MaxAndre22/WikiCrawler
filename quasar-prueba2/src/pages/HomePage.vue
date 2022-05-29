@@ -9,6 +9,7 @@
         color="primary"
         v-model="words" 
         placeholder="Ingrese una o varias palabras."
+        :rules="[ val => val && val.length > 0 || 'Por favor escriba algo']"
       />
       
       <q-btn
@@ -36,22 +37,25 @@
 </template>
 
 <script>
-
 import { defineComponent, ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 export default defineComponent({
   name: 'HomePage',
 
   setup(){
-
     const words = ref(null)
+    const router = useRouter()
 
     return{ 
       words,
+
       //Vue lifecycle hooks beforecreate()
       varA: 10, varB1: 150, varB2: 7, varB3: 4, varC1: 40, varC2: 70, varD: 2, varE: 27, varF: "'What', 'The', 'A', 'An' y 'Another'",
+      
       onSubmit(){
-        console.log(words.value) 
+        //console.log(words.value)
+        router.push({name: 'word', params: { keyword: words.value }}) 
       }
     }
   }
