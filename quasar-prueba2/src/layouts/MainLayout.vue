@@ -7,7 +7,7 @@
         flat
         round
         dense
-        @click="$router.replace('home')"
+        @click="$router.replace('/')"
       />
       <h1 style="color: white; font-family: 'Inter', sans-serif">
         WikiCrawler
