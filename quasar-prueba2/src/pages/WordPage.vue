@@ -4,9 +4,9 @@
 
     <div classname="data" class="bg-secondary" style="min-height: 100vh;padding: 12px;">
       <ul style="list-style-type: none;">
-        <li><router-link :to="{ name: 'wiki', params: { keyword: keyword, page:var1 } }"> {{var1}}</router-link></li>
-        <li><router-link :to="{ name: 'wiki', params: { keyword: keyword, page:var2 } }"> {{var2}}</router-link></li>
-        <li><router-link :to="{ name: 'wiki', params: { keyword: keyword, page:var3 } }"> {{var3}}</router-link></li>
+        <li v-for="item in pages" :key="item._id">
+          <router-link :to="{ name: 'wiki', params: { keyword: keyword, page:item.name } }"> {{item.name}}</router-link>
+        </li>
       </ul>
     </div>
   </q-page>
@@ -16,11 +16,29 @@
 import { defineComponent } from 'vue'
 import { useRouter } from 'vue-router'
 
-//const resultsNamePages = //Lista de nombres de paginas que son respuesta --> Dinamico
-
-// Results = pages that the word appears
 export default defineComponent({
   name: 'WordPage',
+
+  data(){
+    return{
+      pages: [
+        { name: 'Aguanish River' },
+        { name: 'Triple 9' },
+        { name: 'Chrysoprasis guerrerensis' },
+        { name: 'Super Auto Pets' },
+        { name: 'Angelo Altieri' },
+        { name: 'Sugarloaf massacre' },
+        { name: 'Trinity College School' },
+        { name: 'Mortimer J. Adler' },
+        { name: 'Frielendorf' },
+        { name: 'Lucian Itu' },
+        { name: 'Gilgit River' },
+        { name: 'Cengiz Coşkun' },
+        { name: 'Juan Sebastián Gamboa' },
+        { name: 'XD' }
+      ]
+    }
+  },
 
   setup(){
     const router = useRouter()
@@ -30,6 +48,5 @@ export default defineComponent({
       keyword: router.currentRoute.value.params.keyword
     }
   }
-  
 })
 </script>
