@@ -1,7 +1,7 @@
 <template>
   <q-page>
     <h2 class="flex flex-center text-white" style="margin-top: -2%;"> Artículo: "{{page}}" </h2>
-    <h2 class="flex flex-center text-white" style="margin-top: -2%;"> Palabra: "{{keyword}}" </h2>
+    <h2 class="flex flex-center text-white" style="margin-top: -2%;"> Palabra(s): "{{keyword}}" </h2>
 
     <div classname="data" class="bg-secondary" style="margin-top: -2%; min-height: 100vh;">
       <h5 class="text-center" style="padding-top: 2%;">
