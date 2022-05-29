@@ -5,6 +5,12 @@ const routes = [
     children: [
       { path: "home", component: () => import("pages/HomePage.vue") },
       { path: "index", component: () => import("pages/IndexPage.vue") },
+      {
+        path: "word/:keyword",
+        name: "word",
+        prop: true,
+        component: () => import("pages/WordPage.vue"),
+      },
     ],
   },
 
