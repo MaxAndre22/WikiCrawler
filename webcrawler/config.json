@@ -1,0 +1,6 @@
+{
+    "crawler": {
+        "delay": 0.1,
+        "maxDepth": 3
+    }
+}
